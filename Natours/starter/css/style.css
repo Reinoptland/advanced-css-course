@@ -6,3 +6,85 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+/* Basic reset */
+
+* {
+    margin: 0px;
+    padding: 0px;   
+    box-sizing: border-box;
+}
+
+/* Setting up fonts through inheritance */
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+
+    /* White outline around the page */
+
+    padding: 30px;
+}
+
+.header {
+    height: 95vh;
+
+    /* Linear gradient + image for a hero header */
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(126, 213, 111, 0.788), 
+        #28b48593), 
+    url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+
+    /* Set relative here so origin in absolute logo box are calculated from this element */
+    position: relative;
+
+    /* Top left, top right, bottom right, bottom left */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.heading-primary {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    /* Display block to occupy all the space is given & to do an automatic line-break */
+    display: block;
+
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+    /* Display block to occupy all the space is given & to do an automatic line-break */
+    display: block;
+
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.5px;
+}
+
